@@ -9,3 +9,6 @@ Una vez se conecta a la red VPN de la UGR (en caso de ser miembro), puede ejecut
 Si no se puede acceder a la VPN referida, o bien se produce algún error, siempre se puede modificar el código de nuestro programa para conectarse a otra base de datos relacional y poder hacer las pruebas en cada uno de los cuatro ficheros JAVA referidos (evidentemente, antes habrá que ejecutar el script SQL que hemos elaborado para crear las tablas relacionales, rellenarlas con datos de prueba y lanzar los disparadores implementados). Si se usa el script proporcionado en el repositorio, se recomienda revisarlo antes de lanzarlo, para crear únicamente lo que queremos, dejando comentadas o borrando el resto de sentencias SQL. 
 
 Posteriormente se desarrollará la documentación para la interfaz gráfica cuando ésta esté completada y funcional, y el ejecutable de la app listo. 
+
+## Sobre la "calidad" de este proyecto
+Este proyecto fue calificado con un 9,5 sobre 10 en Convocatoria Ordinaria.
