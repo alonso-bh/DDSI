@@ -17,7 +17,7 @@ import java.util.Date;
 
 
 
-public class ConsultasS4 {
+public class ConsultasS4 extends Consultas {
 
     Connection conn;
     Statement stmt;
@@ -62,17 +62,7 @@ public class ConsultasS4 {
 
     }
 
-    /**************************************************************************/
-    //Solo tocar usuario y contrasena
-    public void initialize() throws Exception {
-        DriverManager.registerDriver( new oracle.jdbc.driver.OracleDriver());
-
-        //Poner el usuario y contresena:
-        conn = DriverManager.getConnection ("jdbc:oracle:thin:@oracle0.ugr.es:1521/practbd.oracle0.ugr.es",
-                                            "x3593047","x3593047");
-
-        System.out.println("Conexion a la base de datos establecida");
-    }
+   
 
     /**************************************************************************/
     //Esta es la funcion donde se hace la consulta

@@ -20,13 +20,11 @@ import java.util.Date;
 
 import java.util.Scanner;
 
-public class ConsultasS3 {
+public class ConsultasS3 extends Consultas {
     
-    Connection conn;
-    Statement stmt;
     PreparedStatement pstmt;     
 
-    public static void main(String[] args) throws Exception{
+    /*public static void main(String[] args) throws Exception{
 	 
 	String aux = new String();
         String dniTrabajador = new String();
@@ -87,18 +85,8 @@ public class ConsultasS3 {
                
         System.out.println("Fila insertada correctamente");	
 
-    }
+    }*/ 
     
-    //Solo tocar usuario y contrasena
-    public void initialize() throws Exception {
-        DriverManager.registerDriver( new oracle.jdbc.driver.OracleDriver());
-        
-        //Poner el usuario y contresena:
-        conn = DriverManager.getConnection ("jdbc:oracle:thin:@oracle0.ugr.es:1521/practbd.oracle0.ugr.es", 
-                                            "x6067525","x6067525");
-        
-        System.out.println("Conexion a la base de datos establecida");
-    }
     
 
     //Funcion para insertar los datos en la tabla 

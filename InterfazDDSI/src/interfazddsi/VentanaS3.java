@@ -10,10 +10,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author alonso
- */
+
+
 public class VentanaS3 extends javax.swing.JFrame {
 
     /** Creates new form VentanaS3 */

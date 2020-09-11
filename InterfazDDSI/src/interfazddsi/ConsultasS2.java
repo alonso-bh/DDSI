@@ -18,14 +18,14 @@ import oracle.jdbc.*;
 
 import java.util.Scanner;
 
-public class ConsultasS2 {
+public class ConsultasS2 extends Consultas {
     
     static int  idPista = -1; 
     static int capacidad = -1; 
     static String nombrePista = new String(); 
         
-    Connection conn;
-    Statement stmt;
+    //Connection conn;
+    //Statement stmt;
     PreparedStatement pstmt; 
     
     void setCamposParaLaConsulta(int id, int _capacidad, String _nombrePista)
@@ -79,7 +79,7 @@ public class ConsultasS2 {
     
     /**************************************************************************/
     //Solo tocar usuario y contrasena
-    public void initialize() throws Exception {
+    /*public void initialize() throws Exception {
         DriverManager.registerDriver( new OracleDriver()); // oracle.jdbc.driver.
 
         //Poner el usuario y contresena:
@@ -87,7 +87,7 @@ public class ConsultasS2 {
                                             "x6067525","x6067525");
         
         System.out.println("Conexion a la base de datos establecida");
-    }
+    }*/
     
     
 

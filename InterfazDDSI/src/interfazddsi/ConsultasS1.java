@@ -18,8 +18,8 @@ import java.util.Scanner;
 
 public class ConsultasS1 extends Consultas {
     
-    Connection conn;
-    Statement stmt;
+    //Connection conn;
+    //Statement stmt;
     
     /*public static void main(String[] args) throws Exception{
 	
