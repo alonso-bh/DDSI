@@ -19,6 +19,7 @@ public class VentanaS3 extends javax.swing.JFrame {
     /** Creates new form VentanaS3 */
     public VentanaS3() {
         initComponents();
+        this.setTitle("Funcionalidad del subsistema 3");
     }
 
     /** This method is called from within the constructor to

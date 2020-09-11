@@ -20,6 +20,7 @@ public class VentanaS2 extends javax.swing.JFrame {
      */
     public VentanaS2() {
         initComponents();
+        this.setTitle("Funcionalidad del subsistema 2");
     }
 
     /**
