@@ -22,7 +22,7 @@ public class ConsultasS4 extends Consultas {
     Connection conn;
     Statement stmt;
 
-    public static void main(String[] args) throws Exception{
+    /*public static void main(String[] args) throws Exception{
 
         int numero_edicion = -1;
 	String hora = new String();
@@ -58,9 +58,7 @@ public class ConsultasS4 extends Consultas {
 		if (trabajadores_libres[i] != null)
 			System.out.println( trabajadores_libres[i] + "\n");
 	}
-
-
-    }
+    } */ 
 
    
 

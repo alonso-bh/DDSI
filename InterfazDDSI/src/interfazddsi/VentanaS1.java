@@ -36,16 +36,22 @@ public class VentanaS1 extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         cajaEdicion = new javax.swing.JTextField();
         botonConsultar = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() | java.awt.Font.BOLD));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel1.setText("Funcionalidad 1: Consultar dinero total aportado ");
+        jLabel1.setText("Funcionalidad 1: Consultar dinero total aportado por colaboradores de una edición");
         jLabel1.setAutoscrolls(true);
 
         jLabel2.setText("Introduzca número de edición:");
+
+        cajaEdicion.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        cajaEdicion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cajaEdicionActionPerformed(evt);
+            }
+        });
 
         botonConsultar.setText("REALIZAR CONSULTA");
         botonConsultar.addActionListener(new java.awt.event.ActionListener() {
@@ -54,9 +60,6 @@ public class VentanaS1 extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(jLabel3.getFont().deriveFont(jLabel3.getFont().getStyle() | java.awt.Font.BOLD));
-        jLabel3.setText("por colaboradores de una edición");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -64,31 +67,28 @@ public class VentanaS1 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
+                    .addComponent(jLabel1)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addGap(68, 68, 68)
-                        .addComponent(cajaEdicion, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(90, 90, 90)
+                        .addComponent(cajaEdicion, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(botonConsultar)
-                .addGap(150, 150, 150))
+                .addGap(248, 248, 248))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(1, 1, 1)
-                .addComponent(jLabel3)
-                .addGap(40, 40, 40)
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(cajaEdicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addComponent(botonConsultar)
+                .addGap(18, 18, 18)
+                .addComponent(botonConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -136,6 +136,10 @@ public class VentanaS1 extends javax.swing.JFrame {
         }  
     }//GEN-LAST:event_botonConsultarActionPerformed
 
+    private void cajaEdicionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaEdicionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cajaEdicionActionPerformed
+
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -143,6 +147,5 @@ public class VentanaS1 extends javax.swing.JFrame {
     private javax.swing.JTextField cajaEdicion;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

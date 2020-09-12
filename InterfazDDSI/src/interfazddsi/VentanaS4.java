@@ -58,7 +58,7 @@ public class VentanaS4 extends javax.swing.JFrame {
             }
         });
 
-        botonEjecutarConsulta.setText("Realizar consulta");
+        botonEjecutarConsulta.setText("REALIZAR CONSULTA");
         botonEjecutarConsulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonEjecutarConsultaActionPerformed(evt);
@@ -90,7 +90,7 @@ public class VentanaS4 extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(botonEjecutarConsulta)
-                .addGap(134, 134, 134))
+                .addGap(130, 130, 130))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,9 +109,9 @@ public class VentanaS4 extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(cajaHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
-                .addComponent(botonEjecutarConsulta)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(botonEjecutarConsulta, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+                .addGap(13, 13, 13))
         );
 
         pack();
@@ -135,9 +135,11 @@ public class VentanaS4 extends javax.swing.JFrame {
         int edicionDada = Integer.parseInt(cajaEdicion.getText());
         System.out.println("edi dada " + edicionDada);
         
-        String dia = cajaFecha.getDate().toString() ;
-        System.out.println(dia);
+        //String dia = cajaFecha.getDate(). ;
+        // System.out.println(dia);
         
+        String hora = cajaHora.getText();
+        System.out.println(hora);
         
     }//GEN-LAST:event_botonEjecutarConsultaActionPerformed
 
