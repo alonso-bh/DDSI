@@ -5,6 +5,7 @@
  */
 package interfazddsi;
 
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -132,8 +133,15 @@ public class VentanaS1 extends javax.swing.JFrame {
 
             System.out.println("Dinero total aportado: "+ totalDineroAportado );
             JOptionPane.showMessageDialog(null, "Resultado: "+ totalDineroAportado + " €");
-
+            
+            try { 
+                c.cerrarConexion();
+            } catch (SQLException ex) {
+                Logger.getLogger(VentanaS4.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }  
+        
+         
     }//GEN-LAST:event_botonConsultarActionPerformed
 
     private void cajaEdicionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaEdicionActionPerformed

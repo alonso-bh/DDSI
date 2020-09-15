@@ -5,6 +5,7 @@
  */
 package interfazddsi;
 
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -193,13 +194,20 @@ public class VentanaS2 extends javax.swing.JFrame {
             }
 
             if (res != 0){
-                JOptionPane.showMessageDialog(this, "Algo has introducido mal...", "Alerta sobre datos introducidos", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Error al ejecutar la consulta. ", "Alerta sobre datos introducidos", JOptionPane.ERROR_MESSAGE);
             }
             else
             {
                 JOptionPane.showMessageDialog(this, "Se ha añadido correctamente la pista.\n Código de resultado: "+res , "Notificación de operación realizada", JOptionPane.INFORMATION_MESSAGE);
             }
         }
+        
+         try { 
+            c.cerrarConexion();
+        } catch (SQLException ex) {
+            Logger.getLogger(VentanaS4.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }//GEN-LAST:event_botonInsertarPistaActionPerformed
 
     private void menuFileAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_menuFileAncestorAdded

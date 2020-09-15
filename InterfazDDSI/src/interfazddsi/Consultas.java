@@ -8,6 +8,7 @@ package interfazddsi;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
@@ -32,6 +33,13 @@ public class Consultas {
         conn = DriverManager.getConnection (cadenaConexion, user, pass);
         
         System.out.println("Conexion a la base de datos establecida");
+        
+        
+    }
+    
+    public void cerrarConexion() throws SQLException
+    {
+        conn.close(); 
     }
     
 }
