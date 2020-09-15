@@ -7,7 +7,9 @@ package interfazddsi;
 
 import java.util.logging.Level;
 import java.time.*; // import the LocalDate class
+import java.util.Calendar;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -40,6 +42,9 @@ public class VentanaS4 extends javax.swing.JFrame {
         cajaHora = new javax.swing.JTextField();
         cajaFecha = new com.toedter.calendar.JDateChooser();
         botonEjecutarConsulta = new javax.swing.JButton();
+        cajaMin = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -50,7 +55,7 @@ public class VentanaS4 extends javax.swing.JFrame {
 
         jLabel3.setText("Introduzca la fecha:");
 
-        jLabel4.setText("Introduzca la hora (formato: Horas:Min):");
+        jLabel4.setText("Introduzca la hora (HH:MM):");
 
         cajaHora.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,6 +70,11 @@ public class VentanaS4 extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText(":");
+
+        jLabel6.setText("NOTA: Esta función ha sido simplificada, y sólo se consultan los trabajadores asociados a la edición dada.");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -72,32 +82,42 @@ public class VentanaS4 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(cajaEdicion, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cajaFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(cajaEdicion)
-                                .addComponent(cajaHora, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE))
-                            .addComponent(cajaFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botonEjecutarConsulta)
-                .addGap(130, 130, 130))
+                        .addComponent(cajaHora, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cajaMin)))
+                .addGap(42, 42, 42))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(119, 119, 119)
+                        .addComponent(botonEjecutarConsulta))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1)))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addComponent(jLabel6)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(15, 15, 15)
                 .addComponent(jLabel1)
-                .addGap(37, 37, 37)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cajaEdicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
@@ -108,7 +128,9 @@ public class VentanaS4 extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(cajaHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cajaHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cajaMin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
                 .addGap(18, 18, 18)
                 .addComponent(botonEjecutarConsulta, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
                 .addGap(13, 13, 13))
@@ -124,7 +146,6 @@ public class VentanaS4 extends javax.swing.JFrame {
     private void botonEjecutarConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEjecutarConsultaActionPerformed
         // TODO add your handling code here:
         ConsultasS4 c = new ConsultasS4();
-        System.out.println("dfasdfasd"); 
         try {
             c.initialize();
         } catch (Exception ex) {
@@ -132,17 +153,80 @@ public class VentanaS4 extends javax.swing.JFrame {
         }
         
         // capturar edición de la ventana
-        int edicionDada = Integer.parseInt(cajaEdicion.getText());
-        System.out.println("edi dada " + edicionDada);
-        
-        //String dia = cajaFecha.getDate(). ;
-        // System.out.println(dia);
-        
-        String hora = cajaHora.getText();
-        System.out.println(hora);
-        
+        if (cajaEdicion.getText().length() == 0 || cajaHora.getText().length() == 0 || cajaMin.getText().length() == 0)
+        {
+            JOptionPane.showMessageDialog(this, "Todos los campos son obligatorios. ", "Alerta sobre datos introducidos", JOptionPane.ERROR_MESSAGE);
+        }
+        else{   // campos NO VACÍOS, ok por ahora ...  
+            
+            int edicionDada = Integer.parseInt(cajaEdicion.getText());
+            int horaDada = Integer.parseInt(cajaHora.getText()) ; 
+            int minDados = Integer.parseInt(cajaMin.getText()); 
+
+            if ( !comprobarCampos(edicionDada, horaDada, minDados) ){      // campos ok
+                JOptionPane.showMessageDialog(this, "Algún campo no es válido", "Alerta sobre datos introducidos", JOptionPane.ERROR_MESSAGE);
+            }
+            else{ 
+                // campos ok
+                int dia  =  cajaFecha.getCalendar().get(Calendar.DAY_OF_MONTH) ; 
+                int mes  = (cajaFecha.getCalendar().get(Calendar.MONTH)) + 1 ;
+                int anio =  cajaFecha.getCalendar().get(Calendar.YEAR); 
+
+                String cadFechaPreparada = dia + "/" + mes + "/" + anio + " " + horaDada + ":" + cajaMin.getText() + ":" + "00"; 
+
+                System.out.println(cadFechaPreparada);
+
+                // ejecutar la consulta
+                String[]  res=  null ;
+
+                try { 
+                    res = c.consultaTrabajadoresLibres(edicionDada, cadFechaPreparada);  
+                } catch (Exception ex) { 
+                    Logger.getLogger(VentanaS4.class.getName()).log(Level.SEVERE, null, ex);
+                    JOptionPane.showMessageDialog(this, "Error al ejecutar la consulta.", "Operación incorrecta", JOptionPane.ERROR_MESSAGE);
+                }
+
+                if (res.length != 0){
+                    JOptionPane.showMessageDialog(this, "Trabajadores libres en esa edición: " + imprimeRes(res) , "Notificación de operación realizada", JOptionPane.INFORMATION_MESSAGE);
+                }
+                else{
+                    JOptionPane.showMessageDialog(this, "No hay trabajadores asociados a esta edición." , "Notificación de operación realizada", JOptionPane.INFORMATION_MESSAGE);
+                }
+
+            }
+        }
     }//GEN-LAST:event_botonEjecutarConsultaActionPerformed
 
+    private String imprimeRes(String[] res){
+        String result = new String(); 
+        for(int i=0; i < res.length; i++){
+            result = result + res[i] + " | "; 
+        }
+        
+        return result;
+    }
+    
+    private boolean comprobarCampos (int edicionDada, int horaDada, int minDados)
+    {
+        boolean ok = true;
+
+        if (edicionDada <0){
+            ok = false;
+        }
+        else{
+            if ( !(horaDada >= 0 && horaDada <= 23) ){
+                ok=false;
+            }
+            else {
+                if ( !(minDados >= 0 && minDados <= 59 ) ){
+                    ok = false; 
+                }
+            }
+        }
+
+
+        return (ok); 
+    }
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -150,9 +234,12 @@ public class VentanaS4 extends javax.swing.JFrame {
     private javax.swing.JTextField cajaEdicion;
     private com.toedter.calendar.JDateChooser cajaFecha;
     private javax.swing.JTextField cajaHora;
+    private javax.swing.JTextField cajaMin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
 }

@@ -19,8 +19,7 @@ import java.util.Date;
 
 public class ConsultasS4 extends Consultas {
 
-    Connection conn;
-    Statement stmt;
+
 
     /*public static void main(String[] args) throws Exception{
 

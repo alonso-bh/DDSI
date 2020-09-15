@@ -183,9 +183,9 @@ public class Interfaz extends javax.swing.JFrame {
             public void run() {
                 new Interfaz().setVisible(true);
                 JOptionPane.showMessageDialog(null, "Información acerca del sistema: \n"
-                                                  + "- Para que este sistema trabaje correctamente debe estar conectado a la red VPN de la UGR."
+                                                  + "- Para que este sistema trabaje correctamente debe estar conectado a la red VPN de la UGR \n  o la base de datos que haya configurado."
                                                   + "\n- Se le mostrarán mensajes de error cuando no introduzca algún dato o éste no sea correcto.\n\n"
-                        + "Trabajo realizado por: Alonso Bueno, Manuel Castellón, Pablo Lombardero, Fco. Javier Torres." );
+                        + "Trabajo realizado por: Alonso Bueno, Manuel Castellón, Pablo Lombardero, Fco. Javier Torres.\n" + "GUI realizada por: Alonso Bueno." );
             }
         });
     }
