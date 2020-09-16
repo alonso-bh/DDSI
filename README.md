@@ -1,4 +1,4 @@
-# Proyecto de Diseño y Desarrollo de Sistemas de Información [DDSI]
+# Diseño y Desarrollo de Sistemas de Información [DDSI]
 
 ## Sobre el proyecto de prácticas
 * El grupo estaba formado por: 
