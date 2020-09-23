@@ -26,9 +26,9 @@ public class Consultas {
     public void initialize() throws Exception {
         DriverManager.registerDriver( new oracle.jdbc.driver.OracleDriver());
         
-        String cadenaConexion = "jdbc:oracle:thin:@oracle0.ugr.es:1521/practbd.oracle0.ugr.es" ;
-        String user = "x6067525"; 
-        String pass = "x6067525"; 
+        String cadenaConexion = "jdbc:oracle:thin:@host:port/nombre_bd" ;
+        String user = "user"; 
+        String pass = "pass"; 
         
         conn = DriverManager.getConnection (cadenaConexion, user, pass);
         
