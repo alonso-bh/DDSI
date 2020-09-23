@@ -6,7 +6,24 @@ Precondiciones:
 0. Usar el IDE Netbeans (es con el que se ha desarrollado la app).
 1. Crear una base de datos relacional.
 2. Usar el script `implementacion_final.sql` (adaptándolo a cada SGBD donde sea necesario) para generar las tablas, rellenarlas y crear los disparadores. En este script, además, hay algunas sentencias `INSERT` que "provocan" el lanzamiento de los disparadores.  
-3. Modificar el código de la clase `Consultas.java` para establecer la conexión a la base de datos que vayas a usar. Sólo hay que modificar el método `initialize()` cambiando el host, el nombre de la BD, user y password. 
+3. Modificar el código de la clase `Consultas.java` para establecer la conexión a la base de datos que vayas a usar. Sólo hay que modificar el método `initialize()` cambiando el host, el nombre de la BD, user y password. El método es:
+
+~~~
+public void initialize() throws Exception {
+    DriverManager.registerDriver( new oracle.jdbc.driver.OracleDriver());
+
+    String cadenaConexion = "jdbc:oracle:thin:@oracle0.ugr.es:1521/practbd.oracle0.ugr.es" ;
+    String user = "x6067525"; 
+    String pass = "x6067525"; 
+
+    conn = DriverManager.getConnection (cadenaConexion, user, pass);
+
+    System.out.println("Conexion a la base de datos establecida");
+
+}
+~~~
+
+
 4. Constuir el fichero `JAR` de la aplicación. 
 5. Ejecutar el `JAR`, y abrirá la ventana principal de la app:
 
