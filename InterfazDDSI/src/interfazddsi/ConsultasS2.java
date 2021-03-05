@@ -84,7 +84,7 @@ public class ConsultasS2 extends Consultas {
 
         //Poner el usuario y contresena:
         conn = DriverManager.getConnection ("jdbc:oracle:thin:@oracle0.ugr.es:1521/practbd.oracle0.ugr.es", 
-                                            "x6067525","x6067525");
+                                            "x*******","x*******");
         
         System.out.println("Conexion a la base de datos establecida");
     }*/
