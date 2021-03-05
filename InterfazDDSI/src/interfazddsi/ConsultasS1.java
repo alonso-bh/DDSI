@@ -51,7 +51,7 @@ public class ConsultasS1 extends Consultas {
         DriverManager.registerDriver( new oracle.jdbc.driver.OracleDriver());
         
         conn = DriverManager.getConnection ("jdbc:oracle:thin:@oracle0.ugr.es:1521/practbd.oracle0.ugr.es", 
-                                            "x6653779","x6653779");
+                                            "x*******","x*******");
         
         System.out.println("Conexion a la base de datos establecida");
     }*/
